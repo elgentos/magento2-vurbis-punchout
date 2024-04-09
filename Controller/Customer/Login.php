@@ -11,6 +11,7 @@ use Laminas\Http\Request;
 use Magento\Customer\Model\ResourceModel\CustomerRepository;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\ObjectManager\Environment\Developer;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\App\State;
@@ -30,7 +31,7 @@ class Login extends Action
     private UrlInterface $url;
 
     public function __construct(
-        $context,
+        Context $context,
         private readonly Session $session,
         private readonly Configuration $configuration,
         private readonly Punchout $punchout,

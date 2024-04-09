@@ -47,7 +47,7 @@ class Punchout
         try {
             $request = new Request('POST', $url, $headers, $data);
             $response = $this->client->send($request);
-            if ($response->getStatusCode() !== 200) {
+            if ($response->getStatusCode() !== 200 && $response->getStatusCode() !== 201) {
                 throw new LocalizedException(__('Request failed with status code %1', $response->getStatusCode()));
             }
 
@@ -69,7 +69,7 @@ class Punchout
     {
         try {
             $response = $this->client->get($url);
-            if ($response->getStatusCode() !== 200) {
+            if ($response->getStatusCode() !== 200 && $response->getStatusCode() !== 201) {
                 throw new LocalizedException(__('Request failed with status code %1', $response->getStatusCode()));
             }
 
