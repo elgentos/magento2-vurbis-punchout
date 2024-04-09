@@ -1,0 +1,42 @@
+<?xml	version="1.0"?>
+<config	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vurbis" translate="label" sortOrder="200">
+            <label>Vurbis Interactive</label>
+        </tab>
+        <section id="vurbis_punchout" translate="label"	type="text" sortOrder="110"	showInDefault="1" showInWebsite="1"	showInStore="0">
+            <label>Punchout</label>
+            <tab>vurbis</tab>
+            <resource>Vurbis_Punchout::punchout</resource>
+            <group id="api" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>API Connect Details</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Punchout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API Url</label>
+                    <comment>Do not ending with '/'</comment>
+                </field>
+                <field	id="supplier_id" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Supplier ID</label>
+                </field>
+                <field id="is_hyva_or_headless" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Is Hyvä or headless</label>
+                    <comment><![CDATA[If your store is using Hyvä or a headless frontend, set this to yes. This will disable setting the quote's customer ID value to null to avoid a GraphQL validation error.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_original_customer_account" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use original customer account</label>
+                    <comment><![CDATA[Instead of creating a new account on the fly after each log-in. Only enable this when you know what you are doing. The trade-off for this is that only one user can place an OCI order since the cart will be shared. If a cart is being filled by one person using a certain account and another user logs in through OCI using this account, the first user's cart contents are cleared.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="send_full_module_list" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Send full module list to Vurbis</label>
+                    <comment><![CDATA[For debugging purposes]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

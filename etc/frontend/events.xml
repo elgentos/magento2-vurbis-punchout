@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_save_after">
+        <observer name="vurbis_punchout_cart_save_after_observer" instance="Vurbis\Punchout\Observer\CartObserver" />
+    </event>
+</config>

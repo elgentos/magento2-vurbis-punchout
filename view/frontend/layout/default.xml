@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Vurbis\Punchout\Block\Script" name="vurbis_punchout_script" template="Vurbis_Punchout::script.phtml" before="-"/>
+        </referenceContainer>
+        <referenceContainer name="before.body.end">
+            <block class="Vurbis\Punchout\Block\Script" name="vurbis_punchout_init" template="Vurbis_Punchout::init.phtml" after="-"/>
+        </referenceContainer>
+    </body>
+</page>

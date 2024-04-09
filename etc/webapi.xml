@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="POST" url="/V1/punchout">
+        <service class="Vurbis\Punchout\Api\PunchoutApiInterface" method="run"/>
+        <resources>
+            <resource ref="Vurbis_Punchout::punchout"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/punchout/products">
+        <service class="Vurbis\Punchout\Api\PunchoutProductsApiInterface" method="run"/>
+        <resources>
+            <resource ref="Vurbis_Punchout::punchout"/>
+        </resources>
+    </route>
+</routes>
