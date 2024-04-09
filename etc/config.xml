@@ -3,8 +3,6 @@
     <default>
         <vurbis_punchout>
             <api>
-                <api_url></api_url>
-                <supplier_id></supplier_id>
                 <use_original_customer_account>0</use_original_customer_account>
                 <send_full_module_list>0</send_full_module_list>
                 <is_hyva_or_headless>0</is_hyva_or_headless>

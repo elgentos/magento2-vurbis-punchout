@@ -1,6 +1,6 @@
 {
   "name": "elgentos/magento2-vurbis-punchout",
-  "description": "This module provides an integration with the Punchout service provided by Vurbis.",
+  "description": "This unofficial module provides an integration with the Punchout service provided by Vurbis.",
   "type": "magento2-module",
   "license": [
     "OSL-3.0"
@@ -12,8 +12,5 @@
     "psr-4": {
       "Vurbis\\Punchout\\": ""
     }
-  },
-  "conflict": {
-    "vurbis/magento2-punchout": "*"
   }
 }
