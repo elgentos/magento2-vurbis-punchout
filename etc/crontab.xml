@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="vurbis_punchout_remove_customers" instance="Vurbis\Punchout\Cron\RemoveGeneratedCustomers" method="execute">
+            <schedule>0 0 * * *</schedule>
+        </job>
+    </group>
+</config>
